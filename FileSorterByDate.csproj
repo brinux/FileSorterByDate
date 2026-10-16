@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<LangVersion>latest</LangVersion>
+	<Deterministic>true</Deterministic>
+	  
+	<EnableNETAnalyzers>true</EnableNETAnalyzers>
+	<AnalysisLevel>latest</AnalysisLevel>
+	<RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+	<RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+	<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+	<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+	<DefaultItemExcludes>$(DefaultItemExcludes);FileSorterByDate.Tests/**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="FileSorterByDate.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpExifTool" Version="13.32.0.1" />
+  </ItemGroup>
+
+</Project>
